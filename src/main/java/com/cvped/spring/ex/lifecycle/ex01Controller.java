@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 // 요청과 응답을 처리하는 클래스 Controller
 @Controller
-public class ex01Controller {
+public class Ex01Controller {
 	// 간단한 html 코드를 response로 만드는 페이지
 	@ResponseBody
 	@RequestMapping("/lifecycle/ex01/1")

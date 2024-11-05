@@ -15,14 +15,15 @@ import com.cvped.spring.ex.datebase.repository.UsedGoodsRepository;
 public class UsedGoodsService {
 
 	@Autowired
-	private UsedGoodsRepository usedGdoodsRepository;
-	// 중고물품 게시글 모두 얻어 오기
-	public getUsedGoodsList() {
+	private UsedGoodsRepository usedGoodsRepository;
+	
+	// 중고물품 게시글 모두 얻어 오기 
+	public List<UsedGoods> getUsedGoodsList() {
 		
-		// usedgoods 테이블 조회 결과 얻어 오기
+		// usedgoods 테이블 조회 결과 얻어 오기 
 		List<UsedGoods> usedGoodsList = usedGoodsRepository.selectUsedGoodsList();
 		
-		return usedGoodsList;
 		
+		return usedGoodsList;
 	}
 }

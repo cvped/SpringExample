@@ -3,20 +3,22 @@ package com.cvped.spring.ex.lifecycle;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 // 해당 클래스의 모든 메소드에 @ResponseBody 가 적용된다
 @RestController // @Controller + ResponseBody
 @RequestMapping("/lifecycle/ex01")
-public class ex01RestController {
-
+public class Ex01RestController {
+	
+	@ResponseBody
 	@RequestMapping("/3")
 	// 직접 만든 클래스 객체 리턴
 	//@ResponseBody
 	public Person objectResponse() {
 	Person me =	new Person("김인규",31);
 	
-	return me;
+			return me;
 	}
 	
 	// status code 적용
