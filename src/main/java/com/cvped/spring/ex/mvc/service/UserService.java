@@ -3,6 +3,7 @@ package com.cvped.spring.ex.mvc.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cvped.spring.ex.mvc.domain.User;
 import com.cvped.spring.ex.mvc.repository.UserRepository;
 
 @Service
@@ -21,6 +22,12 @@ public class UserService {
 		
 		return count;
 		
+	}
+	
+	public User getLastUser() {
+		User user = userRepository.selectLastUser();
+		
+		return user;
 	}
 	
 }

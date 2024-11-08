@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cvped.spring.ex.mybatis.domain.Review;
 import com.cvped.spring.ex.mybatis.service.ReviewService;
 
+@RequestMapping("/mybatis/review")
 @Controller
 public class ReviewController {
 
@@ -18,6 +19,7 @@ public class ReviewController {
 	// id가 5인 리퓨 정보를 json으로 response에 담는다.
 	
 	@RequestMapping("/mybatis/review")
+	@RequestMapping("")
 	@ResponseBody
 	public Review review(@RequestParam("id") int id) {
 	
