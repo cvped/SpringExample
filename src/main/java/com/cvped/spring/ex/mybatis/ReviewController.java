@@ -18,7 +18,6 @@ public class ReviewController {
 	
 	// id가 5인 리퓨 정보를 json으로 response에 담는다.
 	
-	@RequestMapping("/mybatis/review")
 	@RequestMapping("")
 	@ResponseBody
 	public Review review(@RequestParam("id") int id) {

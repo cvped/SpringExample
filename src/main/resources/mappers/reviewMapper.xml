@@ -7,7 +7,7 @@
  	<select id="selectReview" resultType="com.cvped.spring.ex.mybatis.domain.Review"
  	parameterType="int">
  		SELECT
- 			`id`
+ 			`storeId`
  			,`menu`
  			,`userName`
  			,`point`
@@ -20,6 +20,48 @@
  		WHERE 
  			`id` = #(id)
  	</select>
- 
- 
+ 	
+ 	<insert id="insertReview" parameterType="map">
+ 		INTSERT INTO
+ 			`new_review`
+ 		(
+ 			`storeId`
+ 			,`menu`
+ 			,`userName`
+ 			,`point`
+ 			,`review
+ 		)
+ 		VALUE
+ 		(
+ 			#{storeId}
+ 			,#{menu}
+ 			,#{userName}
+ 			,#{point}
+ 			,#{review}
+ 		)
+ 	</insert>
+ 		
+ 		<insert id="insertReviewByObject"
+ 		 parameterType="com.cvped.spring.ex.mybatis.domain.Review">
+ 		
+ 		INTSERT INTO
+ 			`new_review`
+ 		(
+ 			`storeId`
+ 			,`menu`
+ 			,`userName`
+ 			,`point`
+ 			,`review
+ 		)
+ 		VALUE
+ 		(
+ 			#{storeId}
+ 			,#{menu}
+ 			,#{userName}
+ 			,#{point}
+ 			,#{review}	
+ 		)
+ 		
+ 		
+ 		</insert>
  </mapper>
